@@ -1,0 +1,85 @@
+<div class="AD"><table align="center" cellpadding = "10"><div >
+    <header>
+      <h1>Assigning Doctor</h1>
+ </header>
+
+<td>Patient Id:<input type="text" [value]=""size="60"></td><br><br>
+<tr></tr>
+<td>Patient name:<input type="text" [value]=""size="60"></td><br><br>
+<tr></tr>
+<div><h3 class="first">Doctor's List</h3>
+  <select class="Doctor's List">
+      <option>Specialist</option>
+      <option>Cardiologist</option>
+      <option>Gyncologist</option>
+      <option>Pediotric</option>
+      <option>Surgeon</option>
+      <option>Pathologist</option>
+      </select>
+      <br>
+    </div>
+<br><button (click)="onclick($event)">Assign</button>
+</div>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form class="form-horizontal form-material" id="loginform"class="form1" [formGroup]="registrationform" novalidate>
+    <fieldset>
+    <legend>Login</legend>
+    <table> <div class="form-group">
+          <div class="col-xs-12">
+              <input class="form-control" required="" type="text" placeholder="Name" formControlName="name"pInputText >
+          </div>
+      </div>
+      <div *ngIf="registrationform.controls['name'].errors && submitted" class="alert alert-danger">
+          <div *ngIf="registrationform.controls['name'].errors.required">
+              Name should consist 3 Characters
+          </div>
+         
+      </div><br>
+      <div class="form-group ">
+          <div class="col-xs-12">
+          <input class="form-control" required="" type="password" placeholder="Enter Password" formControlName="password" pPassword>
+          </div>
+      </div>
+      <div *ngIf="registrationform.controls['password'].errors && submitted" class="alert alert-danger">
+          <div *ngIf="registrationform.controls['password'].errors.required">
+              Please Enter Valid Email
+          </div>
+           
+      </div><br>
+     
+      
+      <div class="form-group text-center p-b-20">
+          <div align="center" class="col-xs-12">
+  
+              <button pButton type="button"  label="Submit" class="ui-button-rounded" (click)="onSubmit()"></button>
+          </div>
+      </div>
+      <div class="form-group m-b-0">
+         
+      </div>
+    </table>
+  </fieldset>  
+  </form>
